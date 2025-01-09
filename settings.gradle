@@ -1,0 +1,10 @@
+pluginManagement {
+	repositories {
+		maven {
+			name = 'mcwled'
+			url = 'https://db123.ir/minecraft/mcwled/'
+		}
+		mavenCentral()
+		gradlePluginPortal()
+	}
+}

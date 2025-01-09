@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "minecraft-wled",
+	"version": "${version}",
+	"name": "minecraft wled",
+	"description": "integrates minecraft with wled!",
+	"authors": [
+		"db1234719"
+	],
+	"contact": {
+		"homepage": "https://db123.ir/minecraft/mcwled/",
+		"sources": "https://github.com/db1234719/mcwled/"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/minecraft-wled/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"db123.mcwled.MinecraftWled"
+		],
+		"client": [
+			"db123.mcwled.MinecraftWledClient"
+		]
+	},
+	"mixins": [
+		"minecraft-wled.mixins.json",
+		{
+			"config": "minecraft-wled.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
