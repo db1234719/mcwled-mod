@@ -1,6 +1,6 @@
 plugins {
-	id 'fabric-loom' version '1.9-SNAPSHOT'
-	id 'maven-publish'
+    id 'fabric-loom' version '0.12-SNAPSHOT'  // Update this to a known stable version
+    id 'java'
 }
 
 version = project.mod_version
@@ -77,9 +77,7 @@ publishing {
 
 	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
 	repositories {
-		// Add repositories to publish to here.
-		// Notice: This block does NOT have the same function as the block in the top level.
-		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
-	}
+    maven { url 'https://maven.fabricmc.net/' }  // Ensure this repository is included
+    mavenCentral()
+}
 }
